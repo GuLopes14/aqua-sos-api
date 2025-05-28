@@ -6,6 +6,6 @@ public record UsuarioDTO(
     Long id,
     String nome,
     String email,
-    String telefone,
+    String password,
     TipoUsuario tipoUsuario
 ) {}

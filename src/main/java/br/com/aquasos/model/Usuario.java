@@ -8,6 +8,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,15 +20,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Usuario {
-  @Id @GeneratedValue
-  private Long id;
-  @NotBlank
-  private String nome;
-  @Column(unique = true)
-  private String email;
-  private String telefone;
-  @Enumerated(EnumType.STRING)
-  @Column(nullable = false)
-  private TipoUsuario tipoUsuario;
-}
+    @Id @GeneratedValue
+    private Long id;
 
+    private String nome;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "password")
+    private String password;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "tipo_usuario")
+    private TipoUsuario tipoUsuario;
+}

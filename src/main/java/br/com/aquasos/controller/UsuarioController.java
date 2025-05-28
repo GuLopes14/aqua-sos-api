@@ -34,7 +34,7 @@ public class UsuarioController {
                         u.getId(),
                         u.getNome(),
                         u.getEmail(),
-                        u.getTelefone(),
+                        u.getPassword(),
                         u.getTipoUsuario()))
                 .toList();
     }
@@ -47,14 +47,13 @@ public class UsuarioController {
         Usuario usuario = new Usuario();
         usuario.setNome(dto.nome());
         usuario.setEmail(dto.email());
-        usuario.setTelefone(dto.telefone());
         usuario.setTipoUsuario(dto.tipoUsuario());
         Usuario saved = repository.save(usuario);
         return new UsuarioDTO(
                 saved.getId(),
                 saved.getNome(),
                 saved.getEmail(),
-                saved.getTelefone(),
+                saved.getPassword(),
                 saved.getTipoUsuario());
     }
 
@@ -66,7 +65,7 @@ public class UsuarioController {
                 usuario.getId(),
                 usuario.getNome(),
                 usuario.getEmail(),
-                usuario.getTelefone(),
+                usuario.getPassword(),
                 usuario.getTipoUsuario());
     }
 
@@ -87,14 +86,14 @@ public class UsuarioController {
         Usuario usuario = getUsuario(id);
         usuario.setNome(dto.nome());
         usuario.setEmail(dto.email());
-        usuario.setTelefone(dto.telefone());
+        usuario.setPassword(dto.password());
         usuario.setTipoUsuario(dto.tipoUsuario());
         Usuario updated = repository.save(usuario);
         return new UsuarioDTO(
                 updated.getId(),
                 updated.getNome(),
                 updated.getEmail(),
-                updated.getTelefone(),
+                updated.getPassword(),
                 updated.getTipoUsuario());
     }
 
