@@ -20,5 +20,4 @@ public class AuthService implements UserDetailsService {
             () -> new UsernameNotFoundException("Usuário não encontrado")
         );
     }
-    
 }

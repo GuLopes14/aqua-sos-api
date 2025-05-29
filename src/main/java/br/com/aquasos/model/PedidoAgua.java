@@ -41,5 +41,6 @@ public class PedidoAgua {
     @PastOrPresent
     private LocalDate dataSolicitacao;
 
-    @Enumerated(EnumType.STRING)private StatusPedido status;
+    @Enumerated(EnumType.STRING)
+    private StatusPedido status;
 }
