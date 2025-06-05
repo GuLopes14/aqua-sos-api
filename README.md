@@ -68,8 +68,8 @@ AquaSOS é uma plataforma integrada que visa monitorar, organizar e facilitar o 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/AquaSOS.git
-cd AquaSOS
+git clone https://github.com/renatofdavidc/aqua-sos-api.git
+cd AquaSOSProject
 ```
 
 ### 2. Configure o banco de dados
@@ -100,12 +100,18 @@ dotnet ef database update
 dotnet run
 ```
 
-### 5. Acesse o Swagger
+### 5. Acesse o Swagger ou as Razor Pages
 
-Acesse:
+Para acessar o Swagger:
 
 ```
-https://localhost:5001/swagger
+https://localhost:[PORTA FORNECIDA PELA APLICAÇÃO]/swagger
+```
+
+Para acessar a interface gráfica:
+
+```
+https://localhost:[PORTA FORNECIDA PELA APLICAÇÂO]/Home
 ```
 
 Você poderá visualizar e testar todas as rotas da API diretamente pelo navegador.
