@@ -1,0 +1,54 @@
+﻿@page "{id:long}"
+@model AquaSOSProject.Pages.PedidoAgua.EditModel
+@{
+    ViewData["Title"] = "Editar Pedido de Água";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input type="hidden" asp-for="Pedido.Id" />
+
+    <div class="form-group">
+        <label asp-for="Pedido.UsuarioId" class="control-label"></label>
+        <select asp-for="Pedido.UsuarioId"
+                class="form-control"
+                asp-items="Model.UsuariosSelect">
+            <option value="">-- Selecione um usuário --</option>
+        </select>
+        <span asp-validation-for="Pedido.UsuarioId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Pedido.PontoDistribuicaoId" class="control-label"></label>
+        <select asp-for="Pedido.PontoDistribuicaoId"
+                class="form-control"
+                asp-items="Model.PontosSelect">
+            <option value="">-- Selecione um ponto de distribuição --</option>
+        </select>
+        <span asp-validation-for="Pedido.PontoDistribuicaoId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Pedido.QuantidadeLitros" class="control-label"></label>
+        <input asp-for="Pedido.QuantidadeLitros" class="form-control" />
+        <span asp-validation-for="Pedido.QuantidadeLitros" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Pedido.Status" class="control-label"></label>
+        <input asp-for="Pedido.Status" class="form-control" />
+        <span asp-validation-for="Pedido.Status" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="Pedido.DataSolicitacao" />
+
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

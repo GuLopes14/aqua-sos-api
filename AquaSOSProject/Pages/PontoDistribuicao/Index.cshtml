@@ -1,0 +1,49 @@
+﻿@page
+@model AquaSOSProject.Pages.PontoDistribuicao.IndexModel
+@{
+    ViewData["Title"] = "Lista de Pontos de Distribuição";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Novo Ponto</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Cidade</th>
+            <th>Capacidade (Litros)</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Pontos != null && Model.Pontos.Count > 0)
+        {
+            foreach (var item in Model.Pontos)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Nome</td>
+                    <td>@item.Endereco</td>
+                    <td>@item.Cidade</td>
+                    <td>@item.CapacidadeTotalLitros</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">Editar</a>
+                        <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" class="text-center">Nenhum ponto cadastrado.</td>
+            </tr>
+        }
+    </tbody>
+</table>

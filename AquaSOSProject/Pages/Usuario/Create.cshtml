@@ -1,0 +1,30 @@
+﻿@page
+@model AquaSOSProject.Pages.Usuario.CreateModel
+@{
+    ViewData["Title"] = "Criar Usuário";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Usuario.Nome" class="control-label"></label>
+        <input asp-for="Usuario.Nome" class="form-control" />
+        <span asp-validation-for="Usuario.Nome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Usuario.Email" class="control-label"></label>
+        <input asp-for="Usuario.Email" class="form-control" />
+        <span asp-validation-for="Usuario.Email" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Criar</button>
+    <a asp-page="Index" class="btn btn-secondary">Voltar</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

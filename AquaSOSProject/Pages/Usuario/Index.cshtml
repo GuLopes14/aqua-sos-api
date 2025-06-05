@@ -1,0 +1,45 @@
+﻿@page
+@model AquaSOSProject.Pages.Usuario.IndexModel
+@{
+    ViewData["Title"] = "Lista de Usuários";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Novo Usuário</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Usuarios != null && Model.Usuarios.Count > 0)
+        {
+            foreach (var item in Model.Usuarios)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Nome</td>
+                    <td>@item.Email</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">Editar</a>
+                        <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4" class="text-center">Nenhum usuário cadastrado.</td>
+            </tr>
+        }
+    </tbody>
+</table>

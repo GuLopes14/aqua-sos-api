@@ -1,0 +1,6 @@
+@AquaSOSProject_HostAddress = http://localhost:5263
+
+GET {{AquaSOSProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

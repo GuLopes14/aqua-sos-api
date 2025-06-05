@@ -1,0 +1,42 @@
+﻿@page
+@model AquaSOSProject.Pages.PontoDistribuicao.CreateModel
+@{
+    ViewData["Title"] = "Criar Ponto de Distribuição";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Ponto.Nome" class="control-label"></label>
+        <input asp-for="Ponto.Nome" class="form-control" />
+        <span asp-validation-for="Ponto.Nome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Ponto.Endereco" class="control-label"></label>
+        <input asp-for="Ponto.Endereco" class="form-control" />
+        <span asp-validation-for="Ponto.Endereco" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Ponto.Cidade" class="control-label"></label>
+        <input asp-for="Ponto.Cidade" class="form-control" />
+        <span asp-validation-for="Ponto.Cidade" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Ponto.CapacidadeTotalLitros" class="control-label"></label>
+        <input asp-for="Ponto.CapacidadeTotalLitros" class="form-control" />
+        <span asp-validation-for="Ponto.CapacidadeTotalLitros" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Criar</button>
+    <a asp-page="Index" class="btn btn-secondary">Voltar</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
