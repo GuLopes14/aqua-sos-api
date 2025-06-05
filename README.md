@@ -22,7 +22,6 @@ AquaSOS é uma plataforma integrada que visa monitorar, organizar e facilitar o 
    - Cadastro de pontos de distribuição de água  
    - Registro de solicitações de abastecimento  
    - Controle de estoque e status das entregas  
-   - Integração com sensores de nível de água via HTTP  
 
 2. **Aplicativo Mobile (React Native)**  
    - Usuários podem solicitar água e acompanhar o status do pedido  
@@ -43,25 +42,6 @@ AquaSOS é uma plataforma integrada que visa monitorar, organizar e facilitar o 
    - API e banco de dados rodando em containers separados  
    - Persistência de dados garantida com volumes  
    - Deploy automatizado e replicável em qualquer ambiente  
-
-## Impacto da Solução
-
-- **Humanitário**: ajuda pessoas em situação de vulnerabilidade a obter água de forma organizada  
-- **Preventivo**: evita colapsos no abastecimento por meio do monitoramento dos níveis  
-- **Tecnológico**: utiliza ferramentas modernas (IoT, Docker, API REST, App mobile)  
-- **Educacional**: permite que estudantes implementem uma solução completa e funcional com tecnologias aprendidas em aula  
-
-## Tecnologias Utilizadas
-
-- [.NET 8 (ASP.NET Core)](https://learn.microsoft.com/pt-br/aspnet/core/introduction-to-aspnet-core)
-- [Entity Framework Core](https://learn.microsoft.com/pt-br/ef/core/)
-- [Razor Pages + Tag Helpers](https://learn.microsoft.com/aspnet/core/razor-pages/)
-- [SQL Server](https://www.microsoft.com/pt-br/sql-server)
-- [Docker](https://www.docker.com/)
-- [Node-RED](https://nodered.org/)
-- [React Native](https://reactnative.dev/)
-- [MQTT](https://mqtt.org/)
-- [Wokwi IoT Simulator](https://wokwi.com/)
 
 ## Como rodar o projeto localmente (API)
 
