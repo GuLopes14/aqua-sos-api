@@ -1,0 +1,34 @@
+@page
+@model AquaSOSProject.Pages.IndexModel
+@{
+    ViewData["Title"] = "Bem-vindo ao AquaSOS";
+}
+
+<div class="text-center">
+    <h1 class="display-4">AquaSOS</h1>
+    <p>Sistema de gerenciamento de distribuição de água em situações de emergência.</p>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="agua-card">
+                <h3>Usuários</h3>
+                <p>Gerencie os usuários do sistema.</p>
+                <a asp-page="/Usuario/Index" class="btn btn-primary">Acessar</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="agua-card">
+                <h3>Pontos de Distribuição</h3>
+                <p>Gerencie os pontos de distribuição de água.</p>
+                <a asp-page="/PontoDistribuicao/Index" class="btn btn-primary">Acessar</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="agua-card">
+                <h3>Pedidos de Água</h3>
+                <p>Gerencie os pedidos de água.</p>
+                <a asp-page="/PedidoAgua/Index" class="btn btn-primary">Acessar</a>
+            </div>
+        </div>
+    </div>
+</div>

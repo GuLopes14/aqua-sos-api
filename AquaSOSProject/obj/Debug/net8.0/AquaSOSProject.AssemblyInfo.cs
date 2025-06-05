@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AquaSOSProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0517d9d81c0c59531a1e318cc91df4a4dd714022")]
 [assembly: System.Reflection.AssemblyProductAttribute("AquaSOSProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AquaSOSProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

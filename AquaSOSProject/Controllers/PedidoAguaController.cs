@@ -6,6 +6,7 @@ using AquaSOS.DTOs;
 
 namespace AquaSOS.Controllers
 {
+    /// Rota base: api/PedidoAgua
     [ApiController]
     [Route("api/[controller]")]
     public class PedidoAguaController : ControllerBase
@@ -17,6 +18,7 @@ namespace AquaSOS.Controllers
             _context = context;
         }
 
+        /// Rota: GET api/PedidoAgua
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PedidoAguaDTO>>> GetPedidos()
         {
@@ -36,6 +38,7 @@ namespace AquaSOS.Controllers
             return Ok(pedidos);
         }
 
+        /// Rota: GET api/PedidoAgua/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<PedidoAguaDTO>> GetPedido(long id)
         {
@@ -57,6 +60,7 @@ namespace AquaSOS.Controllers
             });
         }
 
+        /// Rota: POST api/PedidoAgua
         [HttpPost]
         public async Task<ActionResult> CreatePedido(PedidoAguaDTO dto)
         {
@@ -75,6 +79,7 @@ namespace AquaSOS.Controllers
             return CreatedAtAction(nameof(GetPedido), new { id = pedido.Id }, dto);
         }
 
+        /// Rota: PUT api/PedidoAgua/{id}
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdatePedido(long id, PedidoAguaDTO dto)
         {
@@ -93,6 +98,8 @@ namespace AquaSOS.Controllers
             return NoContent();
         }
 
+
+        /// Rota: DELETE api/PedidoAgua/{id}
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeletePedido(long id)
         {

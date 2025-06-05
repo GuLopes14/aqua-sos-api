@@ -3790,23 +3790,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Renato\\.nuget\\packages\\": {},
-    "D:\\c\\NuGetPackages": {}
+    "C:\\Users\\guslo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "R:\\dotnet\\AquaSOSProject\\AquaSOSProject.csproj",
+      "projectUniqueName": "C:\\Users\\guslo\\Desktop\\aqua-sos-api\\AquaSOSProject\\AquaSOSProject.csproj",
       "projectName": "AquaSOSProject",
-      "projectPath": "R:\\dotnet\\AquaSOSProject\\AquaSOSProject.csproj",
-      "packagesPath": "C:\\Users\\Renato\\.nuget\\packages\\",
-      "outputPath": "R:\\dotnet\\AquaSOSProject\\obj\\",
+      "projectPath": "C:\\Users\\guslo\\Desktop\\aqua-sos-api\\AquaSOSProject\\AquaSOSProject.csproj",
+      "packagesPath": "C:\\Users\\guslo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\guslo\\Desktop\\aqua-sos-api\\AquaSOSProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\c\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Renato\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\guslo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3815,7 +3815,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3880,7 +3879,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

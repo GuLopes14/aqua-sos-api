@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/AquaSOSProject/css/site.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZP8ThtIyEo2iKRyTIeZjK\u002BB\u002BkVqtpMAECORlRS6citI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4600"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ZP8ThtIyEo2iKRyTIeZjK\u002BB\u002BkVqtpMAECORlRS6citI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 05 Jun 2025 14:43:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AquaSOSProject/css/site.sw08a4nsmb.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sw08a4nsmb"},{"Name":"integrity","Value":"sha256-ZP8ThtIyEo2iKRyTIeZjK\u002BB\u002BkVqtpMAECORlRS6citI="},{"Name":"label","Value":"_content/AquaSOSProject/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4600"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ZP8ThtIyEo2iKRyTIeZjK\u002BB\u002BkVqtpMAECORlRS6citI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 05 Jun 2025 14:43:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

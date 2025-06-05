@@ -1,20 +1,20 @@
 ﻿@page
 @model AquaSOSProject.Pages.PedidoAgua.CreateModel
 @{
-    ViewData["Title"] = "Criar Pedido de Água - TESTE";
+    ViewData["Title"] = "Criar Pedido de Água";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<div style="border: 2px solid red; padding: 10px; margin: 10px;">
-    <h3>TESTE DE DEBUG</h3>
-    <p>Se você está vendo isso, a página carregou corretamente.</p>
+<div class="agua-card">
+    <h3>Informações</h3>
+    <p>Preencha os dados abaixo para criar um novo pedido de água.</p>
 </div>
 
 <form method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
 
-    <div style="border: 1px solid blue; padding: 5px; margin: 5px;">
+    <div class="form-group">
         <label asp-for="Pedido.UsuarioId" class="control-label">Usuário:</label>
         <select asp-for="Pedido.UsuarioId" class="form-control" asp-items="Model.UsuariosSelect">
             <option value="0">-- Selecione um usuário --</option>
@@ -22,7 +22,7 @@
         <span asp-validation-for="Pedido.UsuarioId" class="text-danger"></span>
     </div>
 
-    <div style="border: 1px solid blue; padding: 5px; margin: 5px;">
+    <div class="form-group">
         <label asp-for="Pedido.PontoDistribuicaoId" class="control-label">Ponto de Distribuição:</label>
         <select asp-for="Pedido.PontoDistribuicaoId" class="form-control" asp-items="Model.PontosSelect">
             <option value="0">-- Selecione um ponto --</option>
@@ -30,29 +30,23 @@
         <span asp-validation-for="Pedido.PontoDistribuicaoId" class="text-danger"></span>
     </div>
 
-    <div style="border: 1px solid blue; padding: 5px; margin: 5px;">
+    <div class="form-group">
         <label asp-for="Pedido.QuantidadeLitros" class="control-label">Quantidade (Litros):</label>
         <input asp-for="Pedido.QuantidadeLitros" class="form-control" type="number" min="1" />
         <span asp-validation-for="Pedido.QuantidadeLitros" class="text-danger"></span>
     </div>
 
-    <div style="border: 1px solid blue; padding: 5px; margin: 5px;">
+    <div class="form-group">
         <label asp-for="Pedido.Status" class="control-label">Status:</label>
         <input asp-for="Pedido.Status" class="form-control" value="Pendente" />
         <span asp-validation-for="Pedido.Status" class="text-danger"></span>
     </div>
 
-    <div style="border: 2px solid green; padding: 10px; margin: 10px;">
-        <button type="submit" class="btn btn-primary" style="background-color: red;">CRIAR PEDIDO - TESTE</button>
+    <div class="agua-card">
+        <button type="submit" class="btn btn-primary">CRIAR PEDIDO</button>
         <a asp-page="Index" class="btn btn-secondary">Voltar</a>
     </div>
 </form>
-
-<div style="border: 2px solid orange; padding: 10px; margin: 10px;">
-    <h4>DEBUG INFO:</h4>
-    <p>Usuários disponíveis: @(Model.UsuariosSelect?.Count() ?? 0)</p>
-    <p>Pontos disponíveis: @(Model.PontosSelect?.Count() ?? 0)</p>
-</div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
