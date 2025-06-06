@@ -85,13 +85,13 @@ dotnet run
 Para acessar o Swagger:
 
 ```
-https://localhost:[PORTA FORNECIDA PELA APLICAÇÃO]/swagger
+https://localhost:5263/swagger
 ```
 
 Para acessar a interface gráfica:
 
 ```
-https://localhost:[PORTA FORNECIDA PELA APLICAÇÂO]/Home
+https://localhost:5263/
 ```
 
 Você poderá visualizar e testar todas as rotas da API diretamente pelo navegador.
